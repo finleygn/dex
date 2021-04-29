@@ -8,4 +8,7 @@ const withTM = require('next-transpile-modules')([
 
 const withOptimizedImages = require('next-optimized-images');
 
-module.exports = withPlugins([[withOptimizedImages, { optimizeImages: false }], withTM]);
+module.exports = withPlugins([
+  [withOptimizedImages, { optimizeImages: false }],
+  withTM,
+]);

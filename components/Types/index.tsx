@@ -28,7 +28,7 @@ const Container = styled.div`
   gap: 4px;
 `;
 
-const Tag = styled.span`
+const Tag = styled.span<{ type: ElementType }>`
   padding: 6px 10px;
   font-size: ${({ theme }) => theme.typography.caption.fontSize};
   font-weight: bold;
