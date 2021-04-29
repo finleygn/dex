@@ -18,8 +18,8 @@ const queryClient = new QueryClient({
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <FavouriteProvider>
-      <ThemeProvider theme={themes.base}>
+    <ThemeProvider theme={themes.base}>
+      <FavouriteProvider>
         <GlobalStyle />
         <QueryClientProvider client={queryClient}>
           <Head>
@@ -31,8 +31,8 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
           </Page>
           <ReactQueryDevtools />
         </QueryClientProvider>
-      </ThemeProvider>
-    </FavouriteProvider>
+      </FavouriteProvider>
+    </ThemeProvider>
   );
 }
 

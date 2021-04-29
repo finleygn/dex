@@ -1,6 +1,7 @@
+import { themes } from '@strikelabs/luna';
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: typeof themes.base }>`
   * {
     box-sizing: border-box;
   }
@@ -17,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: ${({ theme }) => theme.defaults.fontSize};
     font-family: ${({ theme }) => theme.defaults.fontFamily};
-    
   }
 
   h1, h2, h3, h4, h5, h6, span, a, p {
